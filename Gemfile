@@ -45,9 +45,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #  ------ learn-rails ------------
-gem 'activerecord-tableless'
+#gem 'activerecord-tableless'
 gem 'compass-rails', '~> 3.0'
-gem 'figaro'
+#gem 'figaro'
 gem 'gibbon'
 gem 'google_drive'
 gem 'high_voltage'
