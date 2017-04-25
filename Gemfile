@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-
+ruby '2.3.3'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
+#  ------ Rails defaults ------------
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
@@ -40,10 +41,29 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#  ------ learn-rails ------------
+gem 'activerecord-tableless'
+gem 'compass-rails', '~> 3.0'
+gem 'figaro'
+gem 'gibbon'
+gem 'google_drive'
+gem 'high_voltage'
+gem 'simple_form'
+gem 'zurb-foundation'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+
+  gem 'better_errors'
+  #gem 'quiet_assets'
+  #gem 'rails_layout'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#For windows
+# gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+# gem 'coffee-script-source', '1.8.0'
+# gem 'bcrypt', platforms: :ruby
